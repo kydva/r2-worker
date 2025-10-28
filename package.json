@@ -1,12 +1,23 @@
 {
 	"name": "r2-worker",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"private": true,
+	"type": "module",
 	"scripts": {
-		"deploy": "wrangler deploy",
+		"deploy": "bash scripts/deploy.sh production",
+		"deploy:staging": "bash scripts/deploy.sh staging",
 		"dev": "wrangler dev",
 		"start": "wrangler dev",
-		"test": "vitest"
+		"test": "vitest",
+		"test:manual": "node test-manual.js",
+		"upload": "node upload.js",
+		"upload:file": "node scripts/upload.js",
+		"list": "node scripts/list-files.js",
+		"list:json": "node scripts/list-files.js --json",
+		"backup": "node scripts/backup.js",
+		"delete-all": "node scripts/delete-all.js",
+		"logs": "wrangler tail",
+		"status": "wrangler deployments list"
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.8.19",

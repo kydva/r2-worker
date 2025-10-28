@@ -1,0 +1,10 @@
+{
+	"workerUrl": "https://r2-worker.jija.workers.dev",
+	"workerName": "r2-worker",
+	"bucketName": "jija",
+	"maxRetries": 3,
+	"retryDelay": 1000,
+	"timeout": 30000,
+	"batchSize": 10,
+	"verbose": false
+}

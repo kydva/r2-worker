@@ -6,10 +6,16 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "r2-worker",
 	"main": "src/index.js",
-	"compatibility_date": "2025-10-24",
+	"compatibility_date": "2025-09-06",
 	"observability": {
 		"enabled": true
-	}
+	},
+	"r2_buckets": [
+		{
+			"binding": "MY_BUCKET",
+			"bucket_name": "jija"
+		}
+	]
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
